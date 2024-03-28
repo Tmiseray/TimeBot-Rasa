@@ -1,0 +1,151 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: find_time_zone
+  examples: |
+    - can you tell the time?
+    - what time zone am i in?
+    - what is the time zone?
+    - tell me this time zone
+    - time zone
+
+- intent: find_time_zone_country
+  examples: |
+    - what is the time zone for [Australia](country)?
+    - tell me the time zone in [Peru](country)
+    - in [Mexico](country), what is the time zone?
+    - [Belize](country) time zone
+    - time zone of [El Salvador](country)
+    - what time zone is [United States](country)?
+
+- intent: find_time_zone_city
+  examples: |
+    - what is the time zone for [Sydney](city)?
+    - tell me the time zone for [Lima](city)
+    - in [Chicago](city), what is the time zone?
+    - what is the time zone of [London](city)?
+    - time zone of [Paris](city)
+    - do you know the time zone of [Madrid](city)?
+    - i need to know the time zone of [Medellin](city)
+    - What is the time zone for [Orlando](city)?
+    - [New York](city) time zone
+
+- intent: city_info
+  examples: |
+    - [London](city)
+    - [San Francisco](city)
+    - [Medellin](city)
+    - [Lima](city)
+    - [Madrid](city)
+    - [Paris](city)
+    - [Dubai](city)
+    - [Sydney](city)
+    - [Miami](city)
+    - [Berlin](city)
+
+- intent: country_info
+  examples: |
+    - [United States](country)
+    - [El Salvador](country)
+    - [Mexico](country)
+    - [Costa Rica](country)
+    - [Canada](country)
+    - [Belize](country)
+    - [Peru](country)
+
+- intent: thanks
+  examples: |
+    - thank you
+    - thanks
+    - great, thanks
+    - appreciate it
+

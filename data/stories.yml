@@ -1,0 +1,71 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: time zone general
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: find_time_zone
+  - action: utter_ask_country
+  - intent: country_info
+  - action: utter_ask_city
+  - intent: city_info
+  - action: utter_finding_time_zone
+  - action: action_time_zone
+  - intent: thanks
+  - action: utter_welcome
+  - action: utter_goodbye
+
+- story: time zone country
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: find_time_zone_country
+  - action: utter_ask_city
+  - intent: city_info
+  - action: utter_finding_time_zone
+  - action: action_time_zone
+  - intent: thanks
+  - action: utter_welcome
+  - action: utter_goodbye
+
+- story: time zone city
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: find_time_zone_city
+  - action: utter_ask_country
+  - intent: country_info
+  - action: utter_finding_time_zone
+  - action: action_time_zone
+  - intent: thanks
+  - action: utter_welcome
+  - action: utter_goodbye

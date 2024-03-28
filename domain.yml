@@ -1,0 +1,104 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - find_time_zone
+  - find_time_zone_country
+  - find_time_zone_city
+  - thanks
+  - city_info
+  - country_info
+
+actions:
+  - action_time_zone
+#  - validate_slot_name
+
+entities:
+  - city
+  - country
+
+slots:
+  city:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: city
+
+  country:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: country
+
+# - lookup: city
+#   examples: |
+#     - London
+#     - San Francisco
+#     - Medellin
+#     - Lima
+#     - Madrid
+#     - Paris
+#     - Dubai
+#     - Sydney
+#     - Miami
+#     - Berlin
+
+# - lookup: country
+#   examples: |
+#     - United States
+#     - El Salvador
+#     - Mexico
+#     - Costa Rica
+#     - Canada
+#     - Belize
+
+responses:
+  utter_greet:
+  - text: 'Hey! How are you?'
+  - text: 'Hi there! How is it going?'
+
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: 'https://i.imgur.com/nGF1K8f.jpg'
+
+  utter_did_that_help:
+  - text: 'Did that help you?'
+
+  utter_happy:
+  - text: 'Great, carry on!'
+
+  utter_goodbye:
+  - text: 'Bye'
+  - text: 'Good bye!'
+
+  utter_iamabot:
+  - text: 'I am a bot, powered by Rasa.'
+
+  utter_ask_country:
+  - text: 'What country are we looking for?'
+  - text: 'Which country were you interested in?'
+
+  utter_ask_city:
+  - text: 'Which city are you needing the time zone for?'
+  - text: 'And what city are we looking at?'
+
+  utter_finding_time_zone:
+  - text: 'Ok! Give me a few seconds...'
+  - text: 'Ok! Give me a few seconds to find the time zone of {city}, {country} for you.'
+  - text: 'No problem! Just a moment...'
+  - text: 'No problem! Just a moment while I find the time zone of {city}, {country} for you.'
+
+  utter_welcome:
+  - text: 'You are welcome!'
+  - text: 'Not a problem!'
+  - text: 'Anytime!'
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
